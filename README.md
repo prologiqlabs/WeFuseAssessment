@@ -15,10 +15,10 @@
 ### Scope of work
 1.	There are two designs sent alongside this assessment. (Homepage.png, Entry.png) These assets are the designs for the website that you need to implement.
 2.	The API Endpoints:
-a.	http://test.fuseclients.com/api/homepage
-b.	http://test.fuseclients.com/api/blog/list
-c.	http://test.fuseclients.com/api/blog/:slug
-i.	Slug is the article slug
+  a.	http://test.fuseclients.com/api/homepage
+  b.	http://test.fuseclients.com/api/blog/list
+  c.	http://test.fuseclients.com/api/blog/:slug
+  i.	Slug is the article slug
 3.	Please make sure that this website is responsive. This is to test your understanding and interpretation of the actual design on mobile and tablet.
 4.	The Homepage is a banner and a list of blog articles.
 5.	The Blog page is a Banner with Copy.
