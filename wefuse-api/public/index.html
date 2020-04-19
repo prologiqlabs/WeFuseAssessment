@@ -1,43 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>WeFuse Assessment</title>
+    <meta name="author" content="Samuel Phatlane">
+    <meta name="description" content="WeFuse Assesment">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/src/App.css">
+
   </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<body align="center">
+<!-- Save for Web Slices (Homepage.png) -->
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<div class="row">
+	<div class="navigation-bar">
+		<div id="navigation-container">
+			<a href="#"><img src="%PUBLIC_URL%/assets/img/logo-neurox2.png"></a>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+			<!-- <ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Projects</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Get in Touch</a></li>
+			  </ul> -->
+			  <!-- <p>Click on the Menu Icon to transform it to "X":</p> -->
+			<div class="container" onclick="hamMenuFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <header>
+        <nav>
+          <a href="vote.html">Vote</a>
+          <a href="search.html">Search</a>
+          <a href="about.html">About</a>
+          <a href="login.html">Log In</a>
+        </nav>
+      </header>
+      
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="header-banner">
+		<h1 class="main-header-byline">Minimalist <br>Blog <br>Theme</h1>
+		<div class="header-breaker"></div>
+		<h5 class="intro-text">Welcome to Neuro, Responsive and Minimal Personel Wordpress Theme. Create Blog, News and Article with Maximum Flexibility.</h5>
+		<a class="down-icon" href=""><i class="fa fa-angle-down"></i></a>
+	</div>
+</div>
+<div class="content">
+	<div class="spacer"></div>
+	<main id="main" class="blog-post" role="main">
+		<article id="post-1" class="post" style="background-image:url('%PUBLIC_URL%/assets/img/neslihan-gunaydin-3493.jpg');">
+			<a href="#" title="title test" rel="bookmark" class="post-link">
+				<div class="row content-row post-details">
+					<header>
+						<h5>Dummy Post Category</h5>
+						<h1 class="post-title">Where to find ideas and inspiration for a blog post</h1>
+					</header>
+					<footer>
+						<div class="post-meta">
+							<i class="fa fa-clock-o"></i>
+								July 12, 2014
+							<i class="fa fa-user"></i>
+								admin
+							<i class="fa fa-comments-o"></i>
+								3 Comments											
+						</div>
+				
+					</footer>
+				</div>
+			</a>
+		</article>
+	</main>
+	<div class="spacer"></div>
+</div>
+<div class="row footer">
+	<div class="footer-breaker"></div>
+	<div class="column footer-contacts">
+		<p>Call Us: (1)118 234 678 - Mail: info@example.com</p>	
+	</div>
+	<div class="column footer-socials">
+		<a href="#"><i class="fa fa-twitter"></i></a>
+		<a href="#"><i class="fa fa-facebook"></i></a>
+		<a href="#"><i class="fa fa-google-plus-g"></i></a>
+		<a href="#"><i class="fa fa-youtube"></i></a>
+		<a href="#"><i class="fa fa-vimeo"></i></a>
+		<a href="#"><i class="fa fa-linkedin"></i></a>
+	</div>
+</div>
+
+<!-- Scripts -->
+<script src="%PUBLIC_URL%/src/App.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</body>
 </html>

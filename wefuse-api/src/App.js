@@ -1,6 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './assets/img/logo-neurox2.png';
 import './App.css';
+import $ from 'jquery';
 
 function App() {
   return (
@@ -21,6 +22,11 @@ function App() {
       </header>
     </div>
   );
+}
+
+function hamMenuFunction(x) {
+  x.classList.toggle("change");
+  $('nav').toggleClass('nav-open');
 }
 
 export default App;
