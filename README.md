@@ -4,7 +4,7 @@
 3.	Axios to be used for request.
 4.	Font awesome for icons
 5.	No CSS frameworks can be used to help with styling.
-6.	Font: Source Sans Pro[<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">]
+6.	Font: Source Sans Pro [https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap](<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">)
 7.	This project must be done on GitHub with an active commit history.
 8.	The assessment must be completed in 7 days.
 9.	Banners are parallax images. Please make sure they meet the requirements of a parallax.
