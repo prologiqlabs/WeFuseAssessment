@@ -1,56 +1,104 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>WeFuse Assessment</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <meta name="author" content="Samuel Phatlane">
+    <meta name="description" content="WeFuse Assesment">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.0.slim.js" integrity="sha256-sCexhaKpAfuqulKjtSY7V9H7QT0TCN90H+Y5NlmqOUE=" crossorigin="anonymous"></script>
-    <script src="assets/js/app.js"></script>
-
   </head>
-  <body>
+<body align="center">
+<!-- Save for Web Slices (Homepage.png) -->
 
-    <nav class="top-menu active">
+<div class="row">
+	<div class="navigation-bar">
+		<div id="navigation-container">
+			<a href="#"><img src="assets/img/logo-neurox2.png"></a>
 
-        <div class="components">
+			<!-- <ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Projects</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Get in Touch</a></li>
+			  </ul> -->
+			  <!-- <p>Click on the Menu Icon to transform it to "X":</p> -->
+			<div class="container" onclick="hamMenuFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <header>
+        <nav>
+          <a href="vote.html">Vote</a>
+          <a href="search.html">Search</a>
+          <a href="about.html">About</a>
+          <a href="login.html">Log In</a>
+        </nav>
+      </header>
+      
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="header-banner">
+		<h1 class="main-header-byline">Minimalist <br>Blog <br>Theme</h1>
+		<div class="header-breaker"></div>
+		<h5 class="intro-text">Welcome to Neuro, Responsive and Minimal Personel Wordpress Theme. Create Blog, News and Article with Maximum Flexibility.</h5>
+		<a class="down-icon" href=""><i class="fa fa-angle-down"></i></a>
+	</div>
+</div>
+<div class="content">
+	<div class="spacer"></div>
+	<main id="main" class="blog-post" role="main">
+		<article id="post-1" class="post" style="background-image:url('assets/img/neslihan-gunaydin-3493.jpg');">
+			<a href="#" title="title test" rel="bookmark" class="post-link">
+				<div class="row content-row post-details">
+					<header>
+						<h5>Dummy Post Category</h5>
+						<h1 class="post-title">Where to find ideas and inspiration for a blog post</h1>
+					</header>
+					<footer>
+						<div class="post-meta">
+							<i class="fa fa-clock-o"></i>
+								July 12, 2014
+							<i class="fa fa-user"></i>
+								admin
+							<i class="fa fa-comments-o"></i>
+								3 Comments											
+						</div>
+				
+					</footer>
+				</div>
+			</a>
+		</article>
+	</main>
+	<div class="spacer"></div>
+</div>
+<div class="row footer">
+	<div class="footer-breaker"></div>
+	<div class="column footer-contacts">
+		<p>Call Us: (1)118 234 678 - Mail: info@example.com</p>	
+	</div>
+	<div class="column footer-socials">
+		<a href="#"><i class="fa fa-twitter"></i></a>
+		<a href="#"><i class="fa fa-facebook"></i></a>
+		<a href="#"><i class="fa fa-google-plus-g"></i></a>
+		<a href="#"><i class="fa fa-youtube"></i></a>
+		<a href="#"><i class="fa fa-vimeo"></i></a>
+		<a href="#"><i class="fa fa-linkedin"></i></a>
+	</div>
+</div>
 
-            <div class="logo fill">
-                <a href="index.html">Hamburger Top Menu</a>
-            </div>
-
-            <ul class="navigation">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Prices</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-
-        </div>
-
-    </nav>
-
-    <div class="hamburger-button">
-        <button type="button">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
-
-    <div class="page-content">
-        <h1>Hamburger Top Menu with Animation</h1>
-        <p>This is a simple Hamburger Top Menu...</p>
-    </div>
-
-<!-- ... -->
-
+<!-- Scripts -->
+<script src="assets/js/app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </body>
 </html>

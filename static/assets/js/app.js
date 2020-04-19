@@ -1,4 +1,6 @@
-$('.hamburger-button button').on('click', function(){
-    $('.top-menu').toggleClass('active');
-    $(this).toggleClass('menu-closed');
-});
+
+
+function hamMenuFunction(x) {
+    x.classList.toggle("change");
+    $('nav').toggleClass('nav-open');
+  }
