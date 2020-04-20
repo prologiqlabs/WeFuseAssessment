@@ -56,30 +56,10 @@
 	</div>
 </div>
 <div class="content">
-	<div class="spacer"></div>
-	<main id="main" class="blog-post" role="main">
-		<article id="post-1" class="post" style="background-image:url('%PUBLIC_URL%/assets/img/neslihan-gunaydin-3493.jpg');">
-			<a href="#" title="title test" rel="bookmark" class="post-link">
-				<div class="row content-row post-details">
-					<header>
-						<h5>Dummy Post Category</h5>
-						<h1 class="post-title">Where to find ideas and inspiration for a blog post</h1>
-					</header>
-					<footer>
-						<div class="post-meta">
-							<i class="fa fa-clock-o"></i>
-								July 12, 2014
-							<i class="fa fa-user"></i>
-								admin
-							<i class="fa fa-comments-o"></i>
-								3 Comments											
-						</div>
-				
-					</footer>
-				</div>
-			</a>
-		</article>
-	</main>
+  <div class="spacer"></div>
+  
+  <div id="rest-posts"></div>
+	
 	<div class="spacer"></div>
 </div>
 <div class="row footer">
@@ -98,7 +78,13 @@
 </div>
 
 <!-- Scripts -->
-<script src="%PUBLIC_URL%/src/App.js"></script>
+<script src="%PUBLIC_URL%/App.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+  function hamMenuFunction(x) {
+    x.classList.toggle("change");
+    $('nav').toggleClass('nav-open');
+  }
+</script>
 </body>
 </html>
