@@ -1,32 +1,40 @@
 import React, {Component} from 'react';
+import Posts from './components/posts';
 //import ReactDOM from 'react-dom';
-import logo from './assets/img/logo-neurox2.png';
 import './App.css';
 
 // console.log('wat', $);
+// const PostsComponent = React.createClass({
+//   postsDisplay: 'PostsComponent',
+// })
 
 class App extends Component{
-  render(){
-    return(
-      // JSX to render goes here
-      <p>App Component</p>
-    );
-  }
-
   state = {
-    homepage: [],
     posts: []
-
   }
 
   componentDidMount(){
     fetch('http://test.fuseclients.com/api/blog/list')
     .then(res => res.json())
-    .then((data) => {
-      this.setState({posts: data})
+    .then((json) => {
+      this.setState({posts: json.data})
     })
     .catch(console.log)
   }
+
+  render() {
+    return(
+      <Posts posts = {[this.state.posts]} />
+    );
+  }
+
+  
+
+  getInitialState() {
+    return {posts: []};
+  }
+
+  
 }
 
 // function App() {
@@ -46,15 +54,15 @@ class App extends Component{
 // 							<i class="fa fa-user"></i>
 // 								admin
 // 							<i class="fa fa-comments-o"></i>
-// 								3 Comments											
+// 								3 Comments
 // 						</div>
-				
+
 // 					</footer>
 // 				</div>
 // 			</a>
 // 		</article>
 //     </main>
-    
+
 //   );
 // }
 
