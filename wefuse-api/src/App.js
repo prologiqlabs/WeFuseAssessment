@@ -16,8 +16,10 @@ class App extends Component{
   componentDidMount(){
     fetch('http://test.fuseclients.com/api/blog/list')
     .then(res => res.json())
-    .then((json) => {
-      this.setState({posts: json.data})
+    .then((data) => {
+      this.setState({
+        isLoaded: true,
+        posts: data})
     })
     .catch(console.log)
   }
