@@ -10,18 +10,36 @@ import './App.css';
 
 class App extends Component{
   state = {
-    posts: []
+    posts: [],
+    homepage: []
   }
 
-  componentDidMount(){
-    fetch('http://test.fuseclients.com/api/blog/list')
-    .then(res => res.json())
-    .then((data) => {
-      this.setState({
-        isLoaded: true,
-        posts: data})
-    })
-    .catch(console.log)
+   componentDidMount(){
+  //   fetch('http://test.fuseclients.com/api/blog/list')
+  //   .then(res => res.json())
+  //   .then((data) => {
+  //     this.setState({
+  //       isLoaded: true,
+  //       posts: data})
+  //   })
+  //   .catch(console.log)
+    
+  let homepageCall = fetch('http://test.fuseclients.com/api/homepage');
+  let postCall = fetch('http://test.fuseclients.com/api/blog/list');
+  //let blogsCall = fetch('');
+
+  Promise.all(homepageCall, postCall)
+    .then(values => Promise.all(values.map(value => value.json())))
+      .then(finalVals => {
+        //console.log(finalVals)
+        let homepageApiResponse = finalVals[0];
+        let postApiResponse = finalVals[1];
+        renderHTML(homepageApiResponse, postApiResponse);
+        this.setState({
+          posts: homepageApiResponse,
+          isLoaded: true
+        })
+      });
   }
 
   render() {
@@ -37,6 +55,29 @@ class App extends Component{
   }
 
   
+}
+function getApiData(){
+  let homepageCall = fetch('http://test.fuseclients.com/api/homepage');
+  let postCall = fetch('http://test.fuseclients.com/api/blog/list');
+  //let blogsCall = fetch('');
+
+  Promise.all(homepageCall, postCall)
+    .then(values => Promise.all(values.map(value => value.json())))
+      .then(finalVals => {
+        //console.log(finalVals)
+        let homepageApiResponse = finalVals[0];
+        let postApiResponse = finalVals[1];
+        renderHTML(homepageApiResponse, postApiResponse);
+        this.setState({
+          posts: homepageApiResponse,
+          isLoaded: true
+        })
+      });
+
+}
+
+function renderHTML(HomeAPIResponse, PostsAPIResponse) {
+  document.querySelector("body").innerHTML = `<h1>${HomeAPIResponse.info}: ${PostsAPIResponse.info}</h1>`
 }
 
 // function App() {
